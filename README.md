@@ -1,4 +1,4 @@
-# Pytorch Implementation Additive Powers of Two Quantization
+# Pytorch Implementation for the Additive Powers of Two Quantization
 
 ## Dataset -> MNIST
 
