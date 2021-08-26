@@ -19,7 +19,7 @@
 
 ### Compared with Uniform Quantization
 
-Pass the value `0` to the argument `power` to switch to uniform quantization
+Pass the value `0` to the argument `power` to switch to uniform quantization <br/>
 Results:
 
 |   Model   | Precision | Hyper-Params                      | Accuracy | Compared with APoT |
