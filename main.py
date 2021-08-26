@@ -177,6 +177,8 @@ def main_worker(gpu, ngpus_per_node, args):
     if not os.path.exists('result'):
         os.makedirs('result')
     fdir = 'result/'+str(args.arch)+'_'+str(args.bit)+'bit'
+    if args.power == 0:
+        fdir += '_uniform'
     if not os.path.exists(fdir):
         os.makedirs(fdir)
 
