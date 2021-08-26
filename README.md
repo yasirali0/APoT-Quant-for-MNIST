@@ -2,6 +2,10 @@
 
 ## Dataset -> MNIST
 
+```
+python main.py --arch resnet18 --bit 5 --epoch 25
+```
+
 |   Model   | Precision | Hyper-Params                          | Accuracy |
 | :-------: | --------- | ------------------------------------- | -------- |
 | ResNet-18 | 5-bit     | batch128_lr0.01_wd0.0001_25epoch      |     |
@@ -17,10 +21,15 @@
 | ResNet-50 | 3-bit     | batch128_lr0.01_wd0.0001_25epoch      |     |
 | ResNet-50 | 2-bit     | batch128_lr0.01_wd0.0001_25epoch      |     |
 
+<br/>
+
 ### Compared with Uniform Quantization
 
-Pass the value `0` to the argument `power` to switch to uniform quantization <br/>
-Results:
+Pass the value `0` to the argument `power` to switch to uniform quantization
+```
+python main.py --arch resnet18 --bit 5 --epoch 25 --power 0
+```
+### Results:
 
 |   Model   | Precision | Hyper-Params                      | Accuracy | Compared with APoT |
 | :-------: | --------- | --------------------------------- | -------- | ------------------ |
