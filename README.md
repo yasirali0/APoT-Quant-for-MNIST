@@ -1,4 +1,4 @@
-# Additive Powers of Two Quantization
+# Pytorch Implementation Additive Powers of Two Quantization
 
 ## Dataset -> MNIST
 
@@ -19,12 +19,8 @@
 
 ### Compared with Uniform Quantization
 
-```
-self.weight_quant = weight_quantize_fn(w_bit=self.bit, power=True)
-self.act_alq = act_quantization(self.bit, self.act_grid, power=True)
-```
-
-Use `power=False` in the above two lines in `QuantConv2d` class in `quant_layer.py` to switch to the uniform quantization, results:
+Pass the value `0` to the argument `power` to switch to uniform quantization
+Results:
 
 |   Model   | Precision | Hyper-Params                      | Accuracy | Compared with APoT |
 | :-------: | --------- | --------------------------------- | -------- | ------------------ |
