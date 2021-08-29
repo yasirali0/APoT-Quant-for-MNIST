@@ -92,7 +92,7 @@ def main_worker(gpu, ngpus_per_node, args):
         if os.path.isfile(args.pretrained):
             print("=> loading pre-trained model from {}".format(args.pretrained))
             checkpoint = torch.load(args.pretrained)
-            model.load_state_dict(checkpoint['model'])
+            model.load_state_dict(checkpoint['state_dict'])
             model.module.show_params()
         else:
             print('no pre-trained model found')
