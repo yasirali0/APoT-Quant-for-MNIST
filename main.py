@@ -92,18 +92,18 @@ def main_worker(gpu, ngpus_per_node, args):
         if os.path.isfile(args.pretrained):
             print("=> loading pre-trained model from {}".format(args.pretrained))
             checkpoint = torch.load(args.pretrained)
-            state_dict = checkpoint['state_dict']
-            from collections import OrderedDict
-            new_state_dict = OrderedDict()
+#             state_dict = checkpoint['state_dict']
+#             from collections import OrderedDict
+#             new_state_dict = OrderedDict()
 
-            for k, v in state_dict.items():
-                if 'module' not in k:
-                    k = 'module.' + k
-                else:
-                    k = k.replace('features.module.', 'module.features.')
-            new_state_dict[k] = v
+#             for k, v in state_dict.items():
+#                 if 'module' not in k:
+#                     k = 'module.' + k
+#                 else:
+#                     k = k.replace('features.module.', 'module.features.')
+#             new_state_dict[k] = v
 
-            model.load_state_dict(new_state_dict)
+            model.load_state_dict(checkpoint['state_dict'])
 
         else:
             print('no pre-trained model found')
