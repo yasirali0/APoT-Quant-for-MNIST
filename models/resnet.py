@@ -7,7 +7,7 @@ import torch
 import torch.nn as nn
 from models.quant_layer import QuantConv2d, first_conv, last_fc
 
-__all__ = ['ResNet', 'resnet18', 'resnet34', 'resnet50', 'resnet101', 'resnet152', ]
+__all__ = ['ResNet', 'resnet10', 'resnet14', 'resnet18', 'resnet34', 'resnet50', 'resnet101', 'resnet152', ]
 
 
 def conv3x3(in_planes, out_planes, stride=1, groups=1, dilation=1, bit=32):
@@ -207,6 +207,18 @@ class ResNet(nn.Module):
 def _resnet(block, layers, **kwargs):
     model = ResNet(block, layers, **kwargs)
     return model
+
+
+def resnet10(**kwargs):
+    """ResNet-10 model
+    """
+    return _resnet(BasicBlock, [1, 1, 1, 1], **kwargs)
+
+
+def resnet14(**kwargs):
+    """ResNet-14 model
+    """
+    return _resnet(BasicBlock, [2, 1, 1, 2], **kwargs)
 
 
 def resnet18(**kwargs):
