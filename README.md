@@ -33,11 +33,16 @@ python main.py --arch resnet18 --bit 5 --epochs 25 --power 0
 
 |   Model   | Precision | Hyper-Params                      | Accuracy | Compared with APoT |
 | :-------: | --------- | --------------------------------- | -------- | ------------------ |
-| ResNet-18 | 5-bit     | batch128_lr0.01_wd0.0001_25epoch  |  99.62   |        0.04        |
-| ResNet-18 | 4-bit     | batch128_lr0.01_wd0.0001_25epoch  |  99.56   |        0.07        |
+| ResNet-18 | 5-bit     | batch128_lr0.01_wd0.0001_25epoch  |  99.40   |       -0.18        |
+| ResNet-18 | 4-bit     | batch128_lr0.01_wd0.0001_25epoch  |  99.39   |       -0.10        |
 | ResNet-18 | 3-bit     | batch128_lr0.01_wd0.0001_25epoch  |  99.24   |       -0.06        |
 | ResNet-18 | 2-bit     | batch128_lr0.01_wd0.0001_25epoch  |  98.31   |       -0.14        |
 | ResNet-10 | 5-bit     | batch128_lr0.01_wd0.0001_25epoch  |  99.68   |       -0.10        |
 | ResNet-10 | 4-bit     | batch128_lr0.01_wd0.0001_25epoch  |  99.54   |       -0.10        |
 | ResNet-10 | 3-bit     | batch128_lr0.01_wd0.0001_25epoch  |  99.25   |       -0.14        |
 | ResNet-10 | 2-bit     | batch128_lr0.01_wd0.0001_25epoch  |  98.45   |       -0.27        |
+
+### To evaluate the models, you can run:
+```
+python main.py -e --pretrained result/resnet18_4bit/model_best.pth.tar --bit 4
+```
