@@ -1,7 +1,8 @@
 # Pytorch Implementation for the Additive Powers of Two Quantization
 
-## Dataset -> MNIST
-## Model -> ResNet
+The original repo is [here](https://github.com/yhhhli/APoT_Quantization.git)
+
+This repo is for the <b>MNIST</b> dataset
 
 ### To train the ResNet-18 model on 5 bit precision for 25 epochs
 ```
