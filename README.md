@@ -2,7 +2,7 @@
 
 The original repo is [here](https://github.com/yhhhli/APoT_Quantization.git)
 
-This repo is for the <b>MNIST</b> dataset
+In this repo, Additive Powers-of-Two quantization technique is applied to train ResNet models on the <b>MNIST</b> dataset
 
 ### To train the ResNet-18 model on 5 bit precision for 25 epochs
 ```
