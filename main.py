@@ -93,7 +93,6 @@ def main_worker(gpu, ngpus_per_node, args):
             print("=> loading pre-trained model from {}".format(args.pretrained))
             checkpoint = torch.load(args.pretrained)
             model.load_state_dict(checkpoint['state_dict'])
-            model.module.show_params()
         else:
             print('no pre-trained model found')
             exit()
@@ -171,6 +170,7 @@ def main_worker(gpu, ngpus_per_node, args):
     # --------------------------------------------------------------------------
     if args.evaluate:
         validate(val_loader, model, criterion, args)
+        model.module.show_params()
         return
 
     if not os.path.exists('result'):
