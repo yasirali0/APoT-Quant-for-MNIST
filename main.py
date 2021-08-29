@@ -171,7 +171,6 @@ def main_worker(gpu, ngpus_per_node, args):
     # --------------------------------------------------------------------------
     if args.evaluate:
         validate(val_loader, model, criterion, args)
-        model.module.show_params()
         return
 
     if not os.path.exists('result'):
