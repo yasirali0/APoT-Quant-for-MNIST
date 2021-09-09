@@ -44,5 +44,5 @@ python main.py --arch resnet18 --bit 5 --epochs 25 --power 0
 
 ### To evaluate the models, you can run:
 ```
-python main.py -e --pretrained result/resnet18_4bit/model_best.pth.tar --bit 4
+python main.py --arch resnet 18 -e --pretrained result/resnet18_4bit/model_best.pth.tar --bit 4
 ```
