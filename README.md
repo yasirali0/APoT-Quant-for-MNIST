@@ -1,8 +1,8 @@
 # Pytorch Implementation for the Additive Powers of Two Quantization
 
-The original repo is [here](https://github.com/yhhhli/APoT_Quantization.git)
+The original repo is at [https://github.com/yhhhli/APoT_Quantization.git](https://github.com/yhhhli/APoT_Quantization.git).
 
-In this repo, Additive Powers-of-Two quantization technique is applied to train ResNet models on the <b>MNIST</b> dataset
+In this repo, Additive Powers-of-Two quantization technique is applied to quantize ResNet models and then evaluated on the <b>MNIST</b> dataset.
 
 ### To train the ResNet-18 model on 5 bit precision for 25 epochs
 ```
